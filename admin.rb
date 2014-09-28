@@ -15,7 +15,7 @@ k.each { |line|
 }
 puts "===================="
 
-filename = "/home/msh/aa.txt";
+filename = "aa.txt";
 File.dirname(filename)
 File.basename(filename)
 File.exists?(filename)

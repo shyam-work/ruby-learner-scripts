@@ -19,3 +19,14 @@ memo >= word.length ? memo : word.length
 end
 longest #=> 5
 
+input = [ 1 ,4, 5, 10 ];
+puts input.inspect;
+
+input.each { |a| puts a; } 
+ans = input.inject(20) { |ans,n| ans - n ; }
+puts ans;
+
+ans = input.inject(25) do |ans,n| 
+    ans - n ; 
+end;
+puts ans;

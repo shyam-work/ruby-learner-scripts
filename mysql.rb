@@ -3,7 +3,7 @@
 require 'mysql'
 
 mysql = Mysql.init();
-mysql.real_connect("localhost", "sfdc", "mysql", "sfdc",3306,"/var/lib/mysql/mysql.sock");
+mysql.real_connect("localhost", "sfdc", "test1234", "sfdc",3306,"/var/lib/mysql/mysql.sock");
 mysql.select_db('sfdc');
 
 mysql.query("DROP TABLE IF EXISTS rocks");

@@ -5,5 +5,5 @@ puts global_variables.to_s
 puts "=================="
 puts local_variables.to_s
 puts "=================="
-pid = spawn('ls');
+pid = spawn('ls -lrt');
 Process.detach(pid)

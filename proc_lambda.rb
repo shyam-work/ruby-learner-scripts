@@ -15,5 +15,17 @@ ret.call
 "This is printed lambda after"
 end
 
-# prints "This is printed"
+# prints "This is printed lambda after"
 puts try_ret_lambda
+
+puts "======================"
+
+abc = Proc.new { |a| puts a }
+def call_a_proc &inputProc
+    inputProc.call Random.rand 10..33
+end
+def call_a_proc_2
+    yield 'yielding'
+end
+call_a_proc &abc
+call_a_proc_2 &abc

@@ -54,3 +54,25 @@ my_method do
 puts "hello block line 1 do impl"
 puts "hello block line 2 do impl"
 end
+
+def call_yield (&procName)
+    procName.call
+    yield
+end
+
+
+abc = lambda do ||
+    puts "Via lambda: " + Random.rand(1..55).to_s
+end
+
+call_yield &abc
+
+abc = Proc.new  do ||
+    puts "Via proc.new: " + Random.rand(1..5).to_s
+end
+
+call_yield &abc
+
+call_yield do || 
+    puts Random.rand(10..52);
+end
